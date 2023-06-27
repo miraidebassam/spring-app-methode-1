@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Définition du bean Adresse -->
+    <bean id="adresseBean" class="com.exemple.Adresse">
+        <!-- Propriétés de l'adresse -->
+        <property name="rue" value="Medina Rue 29x26" />
+        <property name="ville" value="Dakar" />
+    </bean>
+
+    <!-- Définition du bean Etudiant -->
+    <bean id="etudiantBean" class="com.exemple.Etudiant">
+        <!-- Propriétés du bean -->
+        <property name="nom" value="Miraide AUGUSTO BASSAM" />
+        <property name="age" value="20" />
+
+        <!-- Dépendance sur l'adresseBean -->
+        <property name="adresse" ref="adresseBean" />
+    </bean>
+
+</beans>
